@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hubballi', cursive;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    color: rgb(82, 82, 82);
+}
+
+.container {
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 1200px;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgb(233, 233, 233);
+}
+
+.item {
+    height: 400px;
+    margin-top: 50px;
+    display: grid;
+}
+
+.item:nth-child(odd) {
+    grid-template-columns: 400px 400px;
+    align-items: center;
+    margin-left: 90px;
+}
+
+.item:nth-child(even) {
+    grid-auto-flow: dense;
+    direction: rtl;
+    grid-template-columns: 400px 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item__img img {
+    height: 400px;
+}
+
+@media (max-width: 1163px) {
+    .container {
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .item:nth-child(odd) {
+        grid-template-columns: 280px 280px;
+        align-items: center;
+        margin-left: 115px;
+    }
+
+    .item:nth-child(even) {
+        grid-template-columns: 280px 280px;
+    }
+
+    .item__img img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .item:nth-child(odd) {
+        justify-content: center;
+        margin-left: -40px;
+    }
+
+    .item__img img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .item__img img {
+        height: 220px;
+    }
+
+    .item__text {
+        width: 220px;
+        font-size: 14px;
+    }
+
+    .item:nth-child(odd) {
+        grid-template-columns: 200px 200px;
+    }
+    
+    .item:nth-child(even) {
+        grid-template-columns: 200px 200px;
+    }
+}
+
+@media (max-width: 668px) {
+    .item:nth-child(3) {
+        margin-right: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .item:nth-child(odd) {
+        grid-template-columns: 244px;
+    }
+
+    .item:nth-child(even) {
+        grid-template-columns: 244px;
+    }
+
+    .item {
+        margin-top: 25px;
+    }
+
+    .item__text {
+        order: 2;
+    }
+}
+ 
+
+

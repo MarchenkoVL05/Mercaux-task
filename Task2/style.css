@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(233, 233, 233);
+    box-shadow: 2px 7px 10px rgb(235, 233, 233);
+}
+
+.item {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item:not(:nth-child(1)) {
+    margin-top: 50px;
+}
+
+.item__image img {
+    height: 400px;
+}
+
+.item__text {
+    width: 300px;
+    line-height: 1.8;
+    font-family: 'Hubballi', cursive;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(82, 82, 82);
+}
+
+@media (min-width: 992px) and (max-width: 1048px) {
+    .container {
+        padding: 15px;
+    }
+
+    .item {
+        width: 920px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 20px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .item {
+        width: 700px;
+    }
+
+    .item__image img {
+        height: 300px;
+    }
+
+    .item__text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 10px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .item {
+        width: 560px;
+    }
+    
+    .item__image img {
+        height: 250px;
+    }
+
+    .item__text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+ 
+@media (max-width: 600px) {
+    .container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .item {
+        width: 460px;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .item:nth-child(1) .item__image {
+        order: 1;
+    }
+
+    .item:nth-child(2) .item__image {
+        order: 1;
+    }
+
+    .item:nth-child(4) .item__image {
+        order: 1;
+    }
+}
+

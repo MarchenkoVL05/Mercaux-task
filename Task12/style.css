@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    height: 200vh;
+}
+
+.container-header {
+    height: 50px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 1368px;
+    background-color: #ffff;
+}
+
+.header__logo {
+    width: 180px;
+    text-align: center;
+}
+
+.header__logo img {
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.header__wrapper {
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.header__menu {
+    width: 360px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.about, .search {
+    position: relative;
+    padding: 13px;
+    width: 180px;
+    border-left: 1px solid rgb(230, 230, 230);
+    transition: color .2s linear, background-color .2s linear;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about:hover, .search:hover {
+    background-color: rgb(0, 0, 0);
+    color: #ffff;
+}
+
+.about:hover {
+    cursor: default;
+}
+
+.about:hover .about__sub-menu {
+    display: block;
+}
+
+.about__sub-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 179px;
+    padding: 13px;
+    list-style-type: none;
+    background-color: rgb(0, 0, 0);
+    color: #ffff;
+    cursor: default;
+}
+
+.about__sub-menu li {
+    margin-top: 15px;
+}
+
+.about__sub-menu li a {
+    margin-top: 15px;
+    color: #ffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.news {
+    margin-top: 100px;
+}
+
+.news__header {
+    text-align: center;
+    padding: 30px;
+}
+
+.news__img {
+    text-align: center;
+}
+
+.news__img img {
+    height: 600px;
+}
+
+.news__descr {
+    margin: 0 auto;
+    padding: 30px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+
+.container-header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    background-color: #ffff;
+}
+
+.career {
+    margin-top: 50px;
+}
+
+.career__header {
+    text-align: center;
+}
+
+.career__descr {
+    padding: 30px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+
+.investors__descr {
+    padding: 25px;
+}
+
+@media (max-width: 920px) {
+    .container {
+        width: 600px;
+    }
+
+    .news__img img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 620px) {
+    .container {
+        width: 400px;
+    }
+
+    .news__img img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header__wrapper {
+        margin-right: 0;
+    }
+
+    .header__logo img {
+        height: 15px;
+    }
+
+    .about {
+        width: 135px;
+        font-size: 14px;
+    }
+
+    .search {
+        width: 135px;
+        font-size: 14px;
+    }
+
+    .about__sub-menu {
+        width: 134px;
+        top: 40px;
+        right: 0;
+    }
+
+    .about:hover {
+        width: 134px;
+        border-left: none;
+    }
+
+    .search:hover {
+        border-left: none;
+    }
+}
+
+.career__request {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(192, 0, 0);
+}
+
+.popup__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 25%;
+    width: 400px;
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid rgb(211, 211, 211);
+    background-color:rgb(238, 238, 238);
+    z-index: 3;
+}
+
+.popup__input {
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.popup__input:focus {
+    outline: none;
+}
+
+.popup__btn {
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    background-color:rgb(192, 0, 0);
+    font-size: 16px;
+    color:white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup__btn:hover {
+    background-color:rgb(153, 3, 3);
+}
+
+.popup__close {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color:rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    opacity: .5;
+}
+
+@media (max-width: 500px) {
+    .popup {
+        width: 330px;
+    }
+
+    .popup__input, .popup__btn {
+        width: 230px;
+    }
+}
+
+@media (max-width: 350px) {
+    .popup {
+        left: 9%;
+    }
+}

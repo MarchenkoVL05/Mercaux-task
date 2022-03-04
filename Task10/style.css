@@ -1,0 +1,13 @@
+/* #00b19d */
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 150px;
+    filter: invert(49%) sepia(50%) saturate(4959%) hue-rotate(145deg) brightness(100%) contrast(101%);
+}
