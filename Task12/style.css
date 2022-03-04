@@ -38,7 +38,7 @@ body {
     cursor: pointer;
 }
 
-.header__wrapper {
+.wrapper {
     height: 50px;
     width: 100vw;
     display: flex;
@@ -178,7 +178,7 @@ body {
 }
 
 @media (max-width: 400px) {
-    .header__wrapper {
+    .wrapper {
         margin-right: 0;
     }
 

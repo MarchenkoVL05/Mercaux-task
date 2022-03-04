@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const headerWrapper = document.querySelector('.header__wrapper');
+const headerWrapper = document.querySelector('.wrapper');
 
 const newsLink = document.querySelector('.news__link');
 const careerLink = document.querySelector('.career__link');

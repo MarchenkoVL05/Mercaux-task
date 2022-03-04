@@ -38,7 +38,7 @@ body {
     cursor: pointer;
 }
 
-.header__wrapper {
+.wrapper {
     height: 50px;
     width: 100vw;
     display: flex;

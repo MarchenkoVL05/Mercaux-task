@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const headerWrapper = document.querySelector('.header__wrapper');
+const headerWrapper = document.querySelector('.wrapper');
 
 const overlay = document.querySelector('.overlay');
 const popup = document.querySelector('.popup');
